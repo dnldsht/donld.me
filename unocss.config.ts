@@ -19,7 +19,7 @@ export default defineConfig({
         provider: 'fontshare',
         fonts: {
           sans: 'Satoshi',
-          serif: 'Telma',
+          serif: 'GroteskBold',
         },
       },
     ),
