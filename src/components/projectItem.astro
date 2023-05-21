@@ -1,0 +1,52 @@
+---
+import { Project } from "./projectsList/_projectList";
+export interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+---
+
+<div
+  id="project"
+  class="grid-span-2 flex flex-col border-b defaultBorder pb-5 gap-1"
+>
+  <div class="flex items-center gap-2">
+    <a
+      target="_blank"
+      href={project.previewLink}
+      class="font-bold font-sans text-base cursor-pointer"
+    >
+      {project.projectName}
+    </a>
+    <div class="flex items-center">
+      {
+        project.repo && (
+          <a
+            target="_blank"
+            href={project.repo?.link}
+            class:list={[
+              "font-bold font-sans opacity-50 hover:opacity-100 block transition-opacity",
+              { "i-ph-gitlab-logo": project.repo?.host === "gitlab" },
+              { "i-ph-github-logo": project.repo?.host === "github" },
+            ]}
+          />
+        )
+      }
+      <a
+        target="_blank"
+        href={project.previewLink}
+        class="font-bold font-sans opacity-50 hover:opacity-100 i-ph-link block transition-opacity"
+      ></a>
+    </div>
+  </div>
+  <p class="font-sans text-base text-sm">{project.description}</p>
+</div>
+
+<style>
+  #postsListWrapper:hover #project {
+    @apply md:dark:text-dark-2 md:text-gray-3 md:transition-colors md:ease-in-out md:duration-300;
+  }
+  #postsListWrapper:hover #project:hover {
+    @apply md:defaultDark md:defaultLight md:transition-colors md:ease-in-out md:duration-100;
+  }
+</style>

@@ -1,29 +1,37 @@
-interface projectsType {
+export interface Project {
   projectName: string
   description: string
-  repoLink: string
+  repo?: {
+    link: string
+    host: 'github' | 'gitlab'
+  }
   previewLink: string
 }
 
 type Projects<T> = T[]
 
-export const projects: Projects<projectsType> = [
+export const projects: Projects<Project> = [
   {
-    projectName: 'Hug',
-    description: 'Use ChatGPT to relieve your frustration.',
-    repoLink: 'https://github.com/Ekarmore/hug',
-    previewLink: 'https://hug.ekar.site',
+    projectName: '@we/nuxt',
+    description: 'A collection of useful modules for Nuxt',
+    previewLink: 'https://nuxt.weconstudio.it/',
+    repo: {
+      link: 'https://git.weconstudio.it/we/nuxt',
+      host: 'gitlab',
+    },
   },
   {
-    projectName: 'Aggr',
-    description: 'An aggregated search engine with multiple search engines.',
-    repoLink: 'https://github.com/Ekarmore/Aggr',
+    projectName: 'Qipo',
+    description: 'Smart system for the management of the company',
     previewLink: 'https://aggr.ekar.site',
   },
   {
-    projectName: 'ekar.site',
-    description: 'The personal website you are browsing at this moment.',
-    repoLink: 'https://github.com/Ekarmore/ekar.site',
+    projectName: '@we/dt',
+    description: 'Powerful and flexible data table for Vue.js',
     previewLink: 'https://ekar.site',
+    repo: {
+      link: 'https://git.weconstudio.it/we/dt',
+      host: 'gitlab',
+    },
   },
 ]
