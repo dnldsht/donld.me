@@ -23,12 +23,12 @@ export const projects: Projects<Project> = [
   {
     projectName: 'Qipo',
     description: 'Smart system for the management of the company',
-    previewLink: 'https://aggr.ekar.site',
+    previewLink: 'https://qipo.it',
   },
   {
     projectName: '@we/dt',
     description: 'Powerful and flexible data table for Vue.js',
-    previewLink: 'https://ekar.site',
+    previewLink: 'https://nuxt.weconstudio.it/datatable',
     repo: {
       link: 'https://git.weconstudio.it/we/dt',
       host: 'gitlab',
