@@ -3,7 +3,7 @@ import unocss from 'unocss/astro'
 import { remarkReadingTime } from './src/scripts/remark-reading-time.mjs'
 
 export default defineConfig({
-  site: 'https://ekar.site',
+  site: 'https://donld.me',
   markdown: {
     shikiConfig: {
       theme: 'css-variables',
