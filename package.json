@@ -1,5 +1,5 @@
 {
-  "name": "site-v2",
+  "name": "donld.me",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
