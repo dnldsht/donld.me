@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import unocss from 'unocss/astro'
+import vercel from '@astrojs/vercel/serverless'
 import { remarkReadingTime } from './src/scripts/remark-reading-time.mjs'
 
 export default defineConfig({
@@ -18,4 +19,10 @@ export default defineConfig({
     port: 8000,
     host: true,
   },
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 })
