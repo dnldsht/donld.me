@@ -11,26 +11,26 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.5",
-    "@astrojs/vercel": "^7.3.0",
-    "@iconify-json/ph": "^1.1.11",
-    "astro": "^4.3.5",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/vercel": "^7.8.2",
+    "@iconify-json/ph": "^1.2.1",
+    "astro": "^4.16.8",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "vite": "^5.1.1"
+    "vite": "^5.4.10"
   },
   "devDependencies": {
     "@evan-yang/eslint-config": "^1.0.9",
-    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/mdi": "^1.2.1",
     "@typescript-eslint/parser": "^6.21.0",
-    "@unocss/preset-attributify": "^0.58.5",
-    "@unocss/preset-icons": "^0.58.5",
-    "@unocss/preset-typography": "^0.58.5",
-    "@unocss/preset-web-fonts": "^0.58.5",
-    "@unocss/reset": "^0.58.5",
-    "@unocss/transformer-directives": "^0.58.5",
-    "eslint": "^8.56.0",
+    "@unocss/preset-attributify": "^0.58.9",
+    "@unocss/preset-icons": "^0.58.9",
+    "@unocss/preset-typography": "^0.58.9",
+    "@unocss/preset-web-fonts": "^0.58.9",
+    "@unocss/reset": "^0.58.9",
+    "@unocss/transformer-directives": "^0.58.9",
+    "eslint": "^8.57.1",
     "eslint-plugin-astro": "^0.31.4",
-    "unocss": "^0.58.5"
+    "unocss": "^0.58.9"
   }
 }
