@@ -1,5 +1,7 @@
 ---
-import { Project } from "./projectsList/_projectList";
+import { previewLink } from './projectsList/_projectList'
+import type { Project } from './projectsList/_projectList'
+
 export interface Props {
   project: Project;
 }
@@ -13,33 +15,29 @@ const { project } = Astro.props;
   <div class="flex items-center gap-2">
     <a
       target="_blank"
-      href={project.previewLink}
+      href={previewLink(project)}
       class="font-bold font-sans text-base cursor-pointer"
     >
       {project.projectName}
     </a>
     <div class="flex items-center">
       {
-        project.repo && (
+        (project.links ?? []).map(link => (
           <a
             target="_blank"
-            href={project.repo?.link}
-            aria-label={`Source ${project.projectName}`}
+            href={link.href}
             class:list={[
-              "font-bold font-sans opacity-50 hover:opacity-100 block transition-opacity",
-              { "i-ph-gitlab-logo": project.repo?.host === "gitlab" },
-              { "i-ph-github-logo": project.repo?.host === "github" },
+              'font-bold font-sans opacity-50 hover:opacity-100 block transition-opacity',
+              link.icon,
             ]}
           />
-        )
+        ))
       }
-      <a
-        target="_blank"
-        href={project.previewLink}
-        aria-label={`Preview ${project.projectName}`}
-        class="font-bold font-sans opacity-50 hover:opacity-100 i-ph-link block transition-opacity"
-      ></a>
+
     </div>
+  </div>
+  <div class="text-sm">
+    { (project.period && `${project.period}`)}
   </div>
   <p class="font-sans text-base text-sm">{project.description}</p>
 </div>
