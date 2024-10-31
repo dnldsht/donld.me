@@ -80,6 +80,17 @@ export const projects: Project[] = [
     ]
   },
   {
+    projectName: "Doctorapp",
+    description: "Suite of applications designed to  optimize organization within your medical practice",
+    period: '2021 - now',
+    links: [
+      {
+        href: 'https://pro.doctorapp.it/', 
+        icon: icons.link
+      }
+    ]
+  },
+  {
     projectName: 'vue-lux',
     description: 'Vue/Nuxt library that simplifies date time formatting and parsing using Luxon',
     period: '2024',
