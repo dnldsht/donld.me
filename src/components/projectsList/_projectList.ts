@@ -74,7 +74,7 @@ export const projects: Project[] = [
         icon: icons.gitlab,
       },
       {
-        href: 'https://nuxt.weconstudio.it/datatable',
+        href: 'https://nuxt.weconstudio.it/components/we-data-table',
         icon: icons.link,
       },
     ],
