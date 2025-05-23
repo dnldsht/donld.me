@@ -4,7 +4,7 @@ const icons = {
   github: 'i-ph-github-logo',
 }
 
-type ValueOf<T> = T[keyof T];
+type ValueOf<T> = T[keyof T]
 
 export interface Link {
   href: string
@@ -18,11 +18,11 @@ export interface Project {
   links: Link[]
 }
 
-export function previewLink(project: Project){
+export function previewLink(project: Project) {
   let link = project.links.find(link => link.icon === icons.link)
-  if (!link) {
+  if (!link)
     link = project.links[0]
-  }
+
   return link.href
 }
 
@@ -35,8 +35,8 @@ export const projects: Project[] = [
       {
         href: 'https://qipo.it',
         icon: icons.link,
-      }
-    ]
+      },
+    ],
   },
   {
     projectName: '@we/nuxt',
@@ -50,8 +50,8 @@ export const projects: Project[] = [
       {
         href: 'https://nuxt.weconstudio.it/',
         icon: icons.link,
-      }
-    ]
+      },
+    ],
   },
   {
     projectName: 'kindle-digest',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         href: 'https://github.com/dnldsht/kindle-digest',
         icon: icons.github,
       },
-    ]
+    ],
   },
   {
     projectName: '@we/dt',
@@ -76,30 +76,34 @@ export const projects: Project[] = [
       {
         href: 'https://nuxt.weconstudio.it/datatable',
         icon: icons.link,
-      }
-    ]
+      },
+    ],
   },
   {
-    projectName: "Doctorapp",
-    description: "Suite of applications designed to  optimize organization within your medical practice",
+    projectName: 'Doctorapp',
+    description: 'Suite of applications designed to  optimize organization within your medical practice',
     period: '2021 - now',
     links: [
       {
-        href: 'https://pro.doctorapp.it/', 
-        icon: icons.link
-      }
-    ]
+        href: 'https://pro.doctorapp.it/',
+        icon: icons.link,
+      },
+    ],
   },
   {
-    projectName: 'vue-lux',
+    projectName: 'nuxt-luxon',
     description: 'Vue/Nuxt library that simplifies date time formatting and parsing using Luxon',
-    period: '2024',
+    period: '2025',
     links: [
       {
-        href: 'https://github.com/dnldsht/vue-lux',
+        href: 'https://github.com/dnldsht/nuxt-luxon',
         icon: icons.github,
       },
-    ]
+      {
+        href: 'https://nuxt-luxon.donld.me',
+        icon: icons.link,
+      },
+    ],
   },
   {
     projectName: 'master-thesis',
@@ -109,8 +113,8 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/master-thesis',
         icon: icons.github,
-      },      
-    ]
+      },
+    ],
   },
   {
     projectName: 'mobile-preview',
@@ -124,8 +128,8 @@ export const projects: Project[] = [
       {
         href: 'https://mobile.donld.me',
         icon: icons.link,
-      }, 
-    ]
+      },
+    ],
   },
   {
     projectName: 'vue-insta-stories',
@@ -139,8 +143,8 @@ export const projects: Project[] = [
       {
         href: 'https://vue-insta-stories.donld.me',
         icon: icons.link,
-      }
-    ]
+      },
+    ],
   },
   {
     projectName: 'Leafpic',
@@ -150,7 +154,7 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/UnevenSoftware/LeafPic',
         icon: icons.github,
-      },      
-    ]
+      },
+    ],
   },
 ]
