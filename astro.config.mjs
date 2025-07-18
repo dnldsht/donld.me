@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config'
 import unocss from 'unocss/astro'
 import vercel from '@astrojs/vercel/serverless'
-import { remarkReadingTime } from './src/scripts/remark-reading-time.mjs'
 
 export default defineConfig({
   site: 'https://donld.me',
@@ -10,7 +9,6 @@ export default defineConfig({
       theme: 'css-variables',
       wrap: false,
     },
-    remarkPlugins: [remarkReadingTime],
   },
   integrations: [unocss(
     { injectReset: true },
