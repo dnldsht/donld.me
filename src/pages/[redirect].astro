@@ -1,0 +1,18 @@
+---
+import { type GetStaticPaths } from 'astro'
+import NotFoundPage from './404.astro'
+
+const redirects: Record<string, string> = {
+  gh: 'https://github.com/dnldsht',
+  linkedin: 'https://www.linkedin.com/in/donald-sh/',
+}
+
+export const getStaticPaths = (() => Object.keys(redirects).map(redirect => ({ params: { redirect } }))) satisfies GetStaticPaths
+
+const { redirect } = Astro.params
+
+if (redirect && redirect in redirects)
+  return Astro.redirect(redirects[redirect])
+---
+
+<NotFoundPage />
