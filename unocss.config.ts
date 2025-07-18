@@ -3,8 +3,8 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
+  presetWind3,
 } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
 
@@ -12,7 +12,7 @@ export default defineConfig({
 
   presets: [
     presetIcons(),
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetWebFonts(
       {
