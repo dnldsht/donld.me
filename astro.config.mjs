@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 import unocss from 'unocss/astro'
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel'
 
 export default defineConfig({
   site: 'https://donld.me',
