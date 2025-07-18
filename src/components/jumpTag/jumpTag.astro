@@ -1,17 +1,12 @@
 ---
-const { pathname } = Astro.url;
-const pathName = pathname.replace(/\//g, "");
+const { pathname } = Astro.url
+const pathName = pathname.replace(/\//g, '')
 const jumpTags = [
   {
-    tag: "projects",
-    path: "/projects/",
-    isActive: pathName === "projects",
+    tag: 'projects',
+    path: '/projects/',
+    isActive: pathName === 'projects',
   },
-  // {
-  //   tag: 'Posts',
-  //   path: '/posts/',
-  //   isActive: pathName === 'posts',
-  // },
 ];
 ---
 
@@ -22,13 +17,13 @@ const jumpTags = [
         <a
           href={tag.path}
           class:list={[
-            "text-xl mt-10 font-serif font-bold animate-delay-150 transition-opacity",
-            { "opacity-10 hover:opacity-50": !tag.isActive },
+            'text-xl mt-10 font-serif font-bold animate-delay-150 transition-opacity',
+            { 'opacity-10 hover:opacity-50': !tag.isActive },
           ]}
         >
           {tag.tag}
         </a>
-      );
+      )
     })
   }
 </main>

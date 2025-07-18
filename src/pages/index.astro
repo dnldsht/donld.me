@@ -1,23 +1,22 @@
 ---
-import DefaultLayout from "@layouts/defaultLayout.astro";
-import ProjectsListLight from "@components/projectsList/projectsListLight.astro";
-import Link from "@components/link.astro";
+import DefaultLayout from '@layouts/defaultLayout.astro'
+import ProjectsListLight from '@components/projectsList/projectsListLight.astro'
 const classList = [
-  "opacity-0",
-  "animate-slideInUp",
-  "animate-fill-both",
-  "font-sans",
-  "font-medium",
-  "mt-8",
+  'opacity-0',
+  'animate-slideInUp',
+  'animate-fill-both',
+  'font-sans',
+  'font-medium',
+  'mt-8',
 ];
 ---
 
 <DefaultLayout title="Donald Shtjefni">
   <article class="prose">
-    <section class:list={["animate-delay-50 ", classList]}>
+    <section class:list={['animate-delay-50 ', classList]}>
       <p class="font-bold font-serif text-xl">donald shtjefni</p>
     </section>
-    <section class:list={["animate-delay-150", classList]}>
+    <section class:list={['animate-delay-150', classList]}>
       <p>
         Hey there! I'm Donald Shtjefni, a senior frontend developer dedicated to
         enhancing user and developer experiences.
@@ -32,10 +31,10 @@ const classList = [
       </p>
     </section>
   </article>
-  <section class:list={["animate-delay-300", classList]}>
+  <section class:list={['animate-delay-300', classList]}>
     <ProjectsListLight />
   </section>
-  <section class:list={["animate-delay-600", classList]}>
+  <section class:list={['animate-delay-600', classList]}>
     <p id="blockTitle">Now</p>
     <p>
       Currently, I am working at <a
@@ -50,7 +49,7 @@ const classList = [
       appealing applications
     </p>
   </section>
-  <section class:list={["animate-delay-750", classList]}>
+  <section class:list={['animate-delay-750', classList]}>
     <p id="blockTitle">Contact</p>
     <p>
       You can contact me by <a

@@ -9,16 +9,16 @@ const { backTo } = Astro.props;
   <a
     href={`/${backTo}`}
     class:list={[
-      "w-min flex items-center cursor-pointer hover:opacity-50 transition-opacity ease",
+      'w-min flex items-center cursor-pointer hover:opacity-50 transition-opacity ease',
     ]}
   >
     <i
       class:list={[
-        { "i-ph-arrow-up-left": backTo !== "" },
-        { "i-ph-arrow-line-left": backTo === "" },
+        { 'i-ph-arrow-up-left': backTo !== '' },
+        { 'i-ph-arrow-line-left': backTo === '' },
       ]}></i>
     <p class="ml-1 font-serif font-medium w-16">
-      {backTo || "index"}
+      {backTo || 'index'}
     </p>
   </a>
 </main>

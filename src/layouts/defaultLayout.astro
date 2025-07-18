@@ -1,8 +1,8 @@
 ---
-import MaskHeader from "@components/header/maskHeader.astro";
-import Footer from "@components/footer.astro";
-import BackTo from "@components/backTo.astro";
-import JumpTag from "@components/jumpTag/jumpTag.astro";
+import MaskHeader from '@components/header/maskHeader.astro'
+import Footer from '@components/footer.astro'
+import BackTo from '@components/backTo.astro'
+import JumpTag from '@components/jumpTag/jumpTag.astro'
 interface Props {
   title?: string;
 }
@@ -30,8 +30,8 @@ const { title } = Astro.props;
           <div
             class:list={[
               {
-                hidden: !["posts", "projects"].includes(
-                  Astro.url.pathname.replace(/\//g, "")
+                hidden: !['projects'].includes(
+                  Astro.url.pathname.replace(/\//g, ''),
                 ),
               },
             ]}

@@ -1,13 +1,13 @@
 ---
-import ProjectItem from "@components/projectItem.astro";
-import { projects } from "./_projectList";
+import ProjectItem from '@components/projectItem.astro'
+import { projects } from './_projectList';
 ---
 
 <div id="postsListWrapper" class="pt-5 animate-delay-150">
   <section class="grid md:grid-cols-2 gap-4 border-t defaultBorder pt-5 pb-5">
     {
       projects.map((project) => {
-        return <ProjectItem project={project} />;
+        return <ProjectItem project={project} />
       })
     }
   </section>

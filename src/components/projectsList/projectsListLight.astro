@@ -1,6 +1,6 @@
 ---
-import { projects } from "@components/projectsList/_projectList";
-import ProjectItem from "@components/projectItem.astro";
+import { projects } from '@components/projectsList/_projectList'
+import ProjectItem from '@components/projectItem.astro'
 const lightProjects = projects.slice(0, 4);
 ---
 
@@ -17,7 +17,7 @@ const lightProjects = projects.slice(0, 4);
   <div class="not-prose grid md:grid-cols-2 gap-5">
     {
       lightProjects.map((project) => {
-        return <ProjectItem project={project} />;
+        return <ProjectItem project={project} />
       })
     }
   </div>
