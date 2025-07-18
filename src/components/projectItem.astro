@@ -26,6 +26,7 @@ const { project } = Astro.props;
           <a
             target="_blank"
             href={link.href}
+            aria-label={link.label}
             class:list={[
               'font-bold font-sans opacity-50 hover:opacity-100 block transition-opacity',
               link.icon,

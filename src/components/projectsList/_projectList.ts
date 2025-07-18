@@ -9,6 +9,7 @@ type ValueOf<T> = T[keyof T]
 export interface Link {
   href: string
   icon: ValueOf<typeof icons>
+  label: string
 }
 
 export interface Project {
@@ -35,6 +36,7 @@ export const projects: Project[] = [
       {
         href: 'https://qipo.it',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -46,10 +48,12 @@ export const projects: Project[] = [
       {
         href: 'https://git.weconstudio.it/we/nuxt',
         icon: icons.gitlab,
+        label: 'GitLab repository',
       },
       {
         href: 'https://nuxt.weconstudio.it/',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -61,6 +65,7 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/kindle-digest',
         icon: icons.github,
+        label: 'GitHub repository',
       },
     ],
   },
@@ -72,10 +77,12 @@ export const projects: Project[] = [
       {
         href: 'https://git.weconstudio.it/we/dt',
         icon: icons.gitlab,
+        label: 'GitLab repository',
       },
       {
         href: 'https://nuxt.weconstudio.it/components/we-data-table',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -87,6 +94,7 @@ export const projects: Project[] = [
       {
         href: 'https://pro.doctorapp.it/',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -98,10 +106,12 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/nuxt-luxon',
         icon: icons.github,
+        label: 'GitHub repository',
       },
       {
         href: 'https://nuxt-luxon.donld.me',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -113,6 +123,7 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/master-thesis',
         icon: icons.github,
+        label: 'GitHub repository',
       },
     ],
   },
@@ -124,10 +135,12 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/mobile-preview',
         icon: icons.github,
+        label: 'GitHub repository',
       },
       {
         href: 'https://mobile.donld.me',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -139,10 +152,12 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/dnldsht/vue-insta-stories',
         icon: icons.github,
+        label: 'GitHub repository',
       },
       {
         href: 'https://vue-insta-stories.donld.me',
         icon: icons.link,
+        label: 'Project website',
       },
     ],
   },
@@ -154,6 +169,7 @@ export const projects: Project[] = [
       {
         href: 'https://github.com/UnevenSoftware/LeafPic',
         icon: icons.github,
+        label: 'GitHub repository',
       },
     ],
   },
