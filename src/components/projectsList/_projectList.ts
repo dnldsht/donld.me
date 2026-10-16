@@ -41,6 +41,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    projectName: 'awesome-index',
+    description: 'Awesome lists you can reorder: by stars, recent pushes or who is climbing this week',
+    period: '2026',
+    links: [
+      {
+        href: 'https://github.com/dnldsht/awesome-index',
+        icon: icons.github,
+        label: 'GitHub repository',
+      },
+      {
+        href: 'https://awesome.donld.me',
+        icon: icons.link,
+        label: 'Project website',
+      },
+    ],
+  },
+  {
     projectName: '@we/nuxt',
     description: 'A collection of useful modules for Nuxt',
     period: '2020 - now',
@@ -100,7 +117,7 @@ export const projects: Project[] = [
   },
   {
     projectName: 'nuxt-luxon',
-    description: 'Vue/Nuxt library that simplifies date time formatting and parsing using Luxon',
+    description: 'Effortless date & time management in Nuxt, powered by Luxon',
     period: '2025',
     links: [
       {
