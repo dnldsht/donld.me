@@ -1,21 +1,25 @@
 ---
-const { pathname } = Astro.url
-const routeActiveStyle = pathname.includes('projects')
+interface Props {
+  name?: string
+  icon?: string
+}
+const { name = 'projects', icon = 'i-ph-asterisk' } = Astro.props
+const routeActiveStyle = Astro.url.pathname.includes(name)
   ? 'opacity-100'
   : 'opacity-60 hover:opacity-100 transition-opacity ease';
 ---
 
 <a
-  href="/projects"
+  href={`/${name}`}
   class:list={[
     ' text-sm font-sans font-medium  dark:text-white text-black dark:text-white z-40 hidden md:block',
     routeActiveStyle,
-  ]}>projects</a
+  ]}>{name}</a
 >
 <a
-  aria-label="Projects"
+  aria-label={name}
   class:list={[
-    'i-ph-asterisk text-lg dark:text-white text-black md:hidden',
+    icon, 'text-lg dark:text-white text-black md:hidden',
     routeActiveStyle,
   ]}
-  href="/projects"></a>
+  href={`/${name}`}></a>

@@ -1,0 +1,22 @@
+---
+import NoteMeta from '@components/noteMeta.astro'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  notes: CollectionEntry<'notes'>[]
+}
+const notes = Astro.props.notes.toSorted((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+---
+
+{notes.length === 0
+  ? <p class="mt-10 opacity-50">Nothing here yet.</p>
+  : (
+    <ul class="mt-10 flex flex-col gap-4 font-sans font-medium list-none p-0">
+      {notes.map(note => (
+        <li class="pb-2 border-b defaultBorder">
+          <a href={`/notes/${note.id}`} class="decoration-none hover:opacity-60 transition-opacity">{note.data.title}</a>
+          <NoteMeta note={note} />
+        </li>
+      ))}
+    </ul>
+    )}

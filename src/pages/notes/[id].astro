@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content'
+import DefaultLayout from '@layouts/defaultLayout.astro'
+import BackTo from '@components/backTo.astro'
+import NoteMeta from '@components/noteMeta.astro'
+
+export const prerender = true
+
+export async function getStaticPaths() {
+  const notes = await getCollection('notes', ({ data }) => !data.draft)
+  return notes.map(note => ({ params: { id: note.id }, props: { note } }))
+}
+
+const { note } = Astro.props
+const { Content } = await render(note)
+---
+
+<DefaultLayout title={note.data.title} description={note.data.description}>
+  <BackTo backTo="notes" />
+  <article class="prose dark:prose-invert mt-10 font-sans max-w-none">
+    <h1 class="font-serif mb-1">{note.data.title}</h1>
+    <NoteMeta note={note} />
+    <Content />
+  </article>
+</DefaultLayout>
+
+<style is:global>
+  .astro-code {
+    position: relative;
+  }
+  .astro-code[data-language]:not([data-language="plaintext"])::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0.4rem;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+</style>

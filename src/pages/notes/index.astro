@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content'
+import DefaultLayout from '@layouts/defaultLayout.astro'
+import NoteList from '@components/noteList.astro'
+
+export const prerender = true
+
+const notes = await getCollection('notes', ({ data }) => !data.draft)
+---
+
+<DefaultLayout title="Notes">
+  <NoteList notes={notes} />
+</DefaultLayout>

@@ -7,6 +7,11 @@ const jumpTags = [
     path: '/projects/',
     isActive: pathName === 'projects',
   },
+  {
+    tag: 'notes',
+    path: '/notes/',
+    isActive: pathName === 'notes',
+  },
 ];
 ---
 
@@ -18,7 +23,7 @@ const jumpTags = [
           href={tag.path}
           class:list={[
             'text-xl mt-10 font-serif font-bold animate-delay-150 transition-opacity',
-            { 'opacity-10 hover:opacity-50': !tag.isActive },
+            { 'opacity-40 hover:opacity-70': !tag.isActive },
           ]}
         >
           {tag.tag}

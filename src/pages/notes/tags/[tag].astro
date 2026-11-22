@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content'
+import DefaultLayout from '@layouts/defaultLayout.astro'
+import BackTo from '@components/backTo.astro'
+import NoteList from '@components/noteList.astro'
+
+export const prerender = true
+
+export async function getStaticPaths() {
+  const notes = await getCollection('notes', ({ data }) => !data.draft)
+  const tags = [...new Set(notes.flatMap(note => note.data.tags))]
+  return tags.map(tag => ({
+    params: { tag },
+    props: { notes: notes.filter(note => note.data.tags.includes(tag)) },
+  }))
+}
+
+const { tag } = Astro.params
+const { notes } = Astro.props
+---
+
+<DefaultLayout title={`#${tag} · Notes`} description={`Notes tagged #${tag}`}>
+  <BackTo backTo="notes" />
+  <p class="mt-10 text-xl font-serif font-bold">#{tag}</p>
+  <NoteList notes={notes} />
+</DefaultLayout>

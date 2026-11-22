@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  note: CollectionEntry<'notes'>
+}
+const { date, tags } = Astro.props.note.data
+---
+
+<div class="flex flex-wrap gap-x-3 text-sm">
+  <time class="opacity-50" datetime={date.toISOString()}>
+    {date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+  </time>
+  {tags.map(tag => (
+    <a href={`/notes/tags/${tag}`} class="decoration-none opacity-50 hover:opacity-100 transition-opacity">#{tag}</a>
+  ))}
+</div>
