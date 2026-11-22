@@ -23,7 +23,8 @@ export default defineConfig({
         },
       },
     ),
-    presetTypography(),
+    // 66.13+ colors prose itself: align it with defaultLight/defaultDark
+    presetTypography({ colorScheme: { body: ['black', 200] } }),
   ],
   shortcuts: [
     {
