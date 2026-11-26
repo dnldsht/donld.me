@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@evan-yang/eslint-config": "^1.0.9",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@unocss/astro": "^66.13.0",
     "@unocss/preset-attributify": "^66.13.0",
     "@unocss/preset-icons": "^66.13.0",
