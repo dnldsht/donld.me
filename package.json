@@ -31,7 +31,7 @@
     "@unocss/reset": "^66.13.0",
     "@unocss/transformer-directives": "^66.13.0",
     "eslint": "^8.57.1",
-    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-astro": "^0.34.0",
     "unocss": "^66.13.0"
   }
 }
